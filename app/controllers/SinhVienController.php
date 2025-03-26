@@ -62,7 +62,7 @@ class SinhVienController {
                 
                 // Move uploaded file to target directory
                 if(move_uploaded_file($_FILES["Hinh"]["tmp_name"], $target_file)) {
-                    $this->sinhVien->Hinh = '/public/images/' . $new_filename;
+                    $this->sinhVien->Hinh = $target_dir . $new_filename;
                 } else {
                     $this->sinhVien->Hinh = '';
                 }
